@@ -1,0 +1,3 @@
+sass:
+  sass_dir: assets/scss
+  style: :nested

@@ -1,0 +1,856 @@
+---
+---
+
+@import "bootstrap";
+
+/* ---- INDEX ----
+====================
+
+--  1. GENERAL     --
+--  2. NAVCOM      --
+--  3. NAVBAR      --
+--  4. CAROUSEL    --
+--  5. OVERVIEW    --
+--  6. WORKS       --
+--  7. INFO-MEDIA  --
+--  8. SKILL       --
+--  9. LATEST POST --
+-- 10. PRICE       --
+-- 11. LAST IDEA   --
+-- 12. FOOTER      --
+==================================
+
+===  1. GENERAL ===
+
+  -  COLOR Used
+  #1a1c28 darkness
+  #1abb9a green
+ */
+/* hide and custom different element on specific breakpoint*/
+@media (max-width: 991.98px) {
+  #Navone .hide {
+    display: none;
+  }
+  //------------
+  #NavTwo .nav-item a:hover {
+    background-color: rgba(26, 187, 154, 0.1);
+    border-bottom: 4px solid #1abb9a;
+  }
+  #NavTwo .container {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  #NavTwo .form-control {
+    font-size: 4.5rem !important;
+  }
+  #NavTwo .fa-search {
+    font-size: 2em;
+  }
+  //------------
+  #myCarousel .carousel-indicators li {
+    width: 13px !important;
+    height: 13px !important;
+
+  }
+}
+
+@media (max-width: 768px) {
+  #NavTwo .form-control {
+    font-size: 3.3rem !important;
+  }
+  //------------
+  #myCarousel .carousel-indicators li {
+    width: 11px !important;
+    height: 11px !important;
+  }
+  #myCarousel .carousel-caption h1 {
+    font-size: 1.5rem;
+  }
+  #myCarousel .carousel-caption h5 {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #Navone .hideMore {
+    display: none;
+  }
+  #Navone .navbar-nav {
+    display: contents !important;
+  }
+  #Navone .navbar {
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+    padding-bottom: 0rem !important;
+  }
+  #Navone .nav-item {
+    padding-top: 0px !important;
+  }
+  #Navone .nav-link {
+    padding-top: 6px !important;
+  }
+  //------------------
+  #NavTwo .form-control {
+    font-size: 2.0rem !important;
+  }
+  #NavTwo .navbar-brand {
+    margin-right: 0px;
+  }
+  //------------------
+  #myCarousel .carousel-indicators li {
+    width: 9px !important;
+    height: 9px !important;
+
+  }
+  #myCarousel .carousel-caption h1 {
+    font-size: 0.7rem;
+  }
+  #myCarousel .carousel-caption h5 {
+    font-size: 0.35rem;
+  }
+
+}
+
+.text-green {
+  color: #1abb9a !important;
+}
+
+.text-darkness {
+  color: #1a1c28;
+}
+
+.text-green:hover {
+  color: #6ae9d0;
+}
+
+.bg-green {
+  background-color: #1abb9a !important;
+}
+
+.bg-dark-alpha {
+  background-color: rgba(26, 28, 40, 0.2);
+}
+
+.font-14 {
+  font-size: 14px;
+
+}
+
+/*
+==================================
+
+=== 2. NAVCOM ===
+*/
+
+/* Custom Navbar */
+#Navone .navbar {
+  background-color: #1a1c28 !important;
+  height: 30px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+/* Custom Select Option */
+#Navone select {
+  /* reset select*/
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* styling select*/
+  background-color: #1a1c28;
+  border: none;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  color: #ffffff;
+
+}
+
+#Navone select option:focus {
+  background-color: #1abb9a !important;
+}
+
+#Navone .noHover {
+  pointer-events: none !important;
+  opacity: 1.0;
+}
+
+/*
+==================================
+
+=== 3. NAVBAR ===
+*/
+
+/* add border on top menu :hover */
+#NavTwo .nav-item a {
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+#NavTwo .nav-item a:hover {
+  border-top: 4px solid #1abb9a;
+}
+
+/* change color of Hamburger button */
+#NavTwo .navbar-light .navbar-toggler {
+
+  border-color: #1abb9a !important;
+  background-color: rgba(26, 187, 154, 0.1) !important;
+}
+
+/* Search modal */
+#NavTwo .modal-full {
+  min-width: 100%;
+  margin: 0;
+}
+
+#NavTwo .modal-content {
+  background-color: rgba(26, 28, 40, 0.175);
+  color: #ffffff;
+}
+
+#NavTwo .modal-full .modal-content {
+  min-height: 100vh;
+}
+
+#NavTwo .form {
+  padding-top: 28%;
+}
+
+#NavTwo .form-control {
+  background-color: transparent !important;
+  border: none;
+  color: #ffffff;
+  height: calc(6.25rem + 2px) !important;
+  font-size: 6rem;
+
+}
+
+#NavTwo .form-control::placeholder {
+  color: #ffffff !important;
+
+}
+
+#NavTwo .form-control:focus {
+  box-shadow: none !important;
+}
+
+#NavTwo .search-dialog input:focus {
+  animation: none;
+}
+
+/*animation on modal */
+.blink {
+  animation: blinker 2s linear infinite;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/*
+==================================
+
+=== 4. CAROUSEL ===
+*/
+//set height of carousel
+#myCarousel .carousel-item img {
+  width: auto;
+  max-height: 840px !important;
+}
+
+/*Change indicator */
+#myCarousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #1abb9a;
+  border-radius: 50%;
+}
+
+#myCarousel .carousel-indicators .active {
+  background-color: #ffffff !important;
+}
+
+#myCarousel .anim-indicators {
+  -webkit-animation: colorchange 2s infinite;
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+
+    color: #ffffff;
+  }
+  50% {
+
+    color: #1abc9c;
+  }
+  100% {
+
+    color: #ffffff;
+  }
+}
+
+#myCarousel .carousel-caption {
+  position: absolute;
+  right: 0%;
+  bottom: 0px;
+  left: 0%;
+  z-index: 10;
+  color: #fff;
+  text-align: center;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAEElEQVQImWNgYGD4z0AHAABlBAEAGUklEQAAAABJRU5ErkJggg==) repeat top left;
+}
+
+.border-btm {
+  text-decoration: underline #1abb9a;
+}
+
+/*
+==================================
+
+=== 5. OVERVIEW ===
+*/
+
+//create polygon
+.myPolygon {
+  background-color: #4b5668;
+  transform: rotate(45deg);
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+
+}
+
+#Overview .icon-middle {
+  padding: 8px;
+  height: 40px;
+  width: 40px !important;
+}
+
+.rotate {
+  transform: rotate(-45deg) !important;
+  -webkit-transform: rotate(-45deg) !important;
+  -moz-transform: rotate(-45deg) !important;
+  -o-transform: rotate(-45deg) !important;
+  writing-mode: lr-tb;
+}
+
+.myPolygon .rotate {
+  font-size: 22px;
+}
+
+#Overview .content:hover .myPolygon {
+  background-color: #1abb9a !important;
+}
+
+#Overview .content:hover .text-green {
+  color: #4b5668 !important;
+}
+
+#Overview .btn-secondary {
+  color: #fff;
+  background-color: #1abb9a !important;
+  border-color: #1abb9a !important;
+}
+
+#Overview .btn-secondary:hover, #Overview .btn-secondary:focus, #Overview .btn-secondary:active {
+  box-shadow: 0 0 7px rgba(75, 86, 104, 0.6) !important;
+  background-color: #4b5668 !important;
+  border-color: #4b5668 !important;
+}
+
+#SecOverview {
+  background-color: #f0f1f2;
+}
+
+#SecOverview .btn-light {
+  color: #1abb9a !important;
+}
+
+/*
+==================================
+
+=== 6. WORKS ===
+*/
+#Works .btn-outline-secondary:hover, #Works .btn-outline-secondary:focus, #Works .btn-outline-secondary:active, #Works .btn-outline-secondary:visited {
+  box-shadow: 0 0 7px rgba(26, 187, 154, 0.6) !important;
+  background-color: transparent !important;
+}
+
+#Works .btn-outline-secondary {
+  color: #1abb9a !important;
+  border-color: #1abb9a !important;
+}
+
+#Works .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle {
+  color: #1abb9a !important;
+  background-color: transparent !important;
+  border-color: #1abb9a !important;
+}
+
+//animation portfolio
+.portfolio {
+  animation: portfolio-anim 1s;
+}
+
+@keyframes portfolio-anim {
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3)
+  }
+  50% {
+    opacity: 1
+  }
+
+}
+
+// change figcaption
+#Works .nav li a {
+  transition-duration: 1s;
+}
+
+#Works figcaption {
+  border-bottom: 5px solid #1abb9a;
+}
+
+.f-caption {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.f-caption img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.f-caption-text {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(26, 28, 40, 0.2);
+
+}
+
+//animation figcaption
+#Works figure:hover figcaption {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+//change modal
+#ModalImage .modal-lg {
+  max-width: 1100px !important;
+}
+
+//carousel testimonial
+#Works .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: .5rem;
+}
+
+#CarouselTestimonials .carousel-indicators {
+  bottom: 0;
+  justify-content: left;
+  margin-left: 0;
+  position: relative;
+
+}
+
+#CarouselTestimonials .carousel-indicators li {
+
+  width: 5px;
+  height: 5px;
+  border-radius: 25%;
+  background-color: #e9ecef !important;
+}
+
+#CarouselTestimonials .carousel-indicators .active {
+  background-color: #1abb9a !important;
+}
+
+.testimonial-Border {
+  border: 1px solid #d2d5d8;
+  box-shadow: 3px 0px 0px 0px #1abb9a;
+}
+
+//filter clients logo
+#Logo img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+#Logo img:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: none;
+}
+
+/*
+==================================
+
+=== 7. INFO-MEDIA ===
+*/
+
+#InfoMedia li {
+  list-style-type: none;
+}
+//set height of carousel
+#InfoMedia .carousel-item  {
+  width: auto;
+  max-height: 650px !important;
+}
+//center text carousel
+#InfoMedia .carousel-caption{
+  position: absolute;
+  right: 0%;
+  bottom: 0px;
+  left: 0%;
+  z-index: 10;
+  color: #fff;
+  text-align: center;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  background-color: rgba(26, 28, 40, 0.6);
+}
+//carousel control
+#InfoMedia .control-carousel{
+  position: absolute;
+  right: 0%;
+  bottom: 10%;
+  left: 0%;
+  z-index: 10;
+  text-align: center;
+}
+//icon from carousel
+#InfoMedia .icon-media{
+  border: solid 1px #ffffff;
+  border-radius: 50%;
+  padding: 8px;
+  margin: 7px;
+  color: #ffffff;
+  height: 60px;
+  width: 60px !important;
+
+}
+#InfoMedia a{
+  text-decoration: none;
+}
+/*
+==================================
+
+=== 8. SKILL ===
+*/
+
+#Skill .skill-circle  {
+  border: solid 1px #1abb9a;
+  border-radius: 50%;
+  padding: 21px;
+  background-color: #1abb9a;
+  color: #ffffff;
+  height: 70px;
+  width: 70px !important;
+}
+#Skill .big-circle:hover .skill-circle {
+  border: solid 1px #1a1c28;
+  border-radius: 50%;
+  padding: 29px;
+  background-color: #1a1c28;
+  color: #ffffff;
+  height: 90px;
+  width: 90px !important;
+}
+#Skill .big-circle:hover{
+  padding: 14px;
+  border: solid 1px #1a1c28;
+}
+#Skill .big-circle{
+  border: solid 1px #1abb9a;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px !important;
+  padding: 24px;
+}
+#Skill .progress {
+  width: 100%;
+}
+
+#Skill .progress-bar {
+  background-image: linear-gradient(to right, rgba(31, 199, 38, 0.7), rgba(25, 222, 192, 1));
+}
+#Skill .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+  border: 1px solid transparent;
+
+}
+#Skill .nav-tabs .nav-link {
+  border-top: 4px solid transparent !important;
+  border-bottom: 4px solid transparent !important;
+}
+#Skill .nav-tabs .nav-link:hover {
+  border-top: 4px solid #1abb9a !important;
+  border-radius: 0px;
+
+}
+
+/*
+==================================
+
+=== 9. LATEST POST ===
+*/
+
+#Posts ul li {
+  list-style-type: none;
+}
+
+#Posts a {
+  text-decoration: none;
+}
+/*
+==================================
+
+=== 10. PRICE ===
+*/
+#Price .rotate_45 {
+  transform: rotate(45deg) !important;
+  -webkit-transform: rotate(45deg) !important;
+  -moz-transform: rotate(45deg) !important;
+  -o-transform: rotate(45deg) !important;
+  position: absolute;
+  top: 5px;
+  right: -3px;
+
+}
+#Price .card-header:first-child {
+  border-radius: 0px;
+}
+#Price .border-3 {
+  -moz-box-shadow: 0px 0px 38px #1a1c28;
+  -webkit-box-shadow: 0px 0px 38px #1a1c28;
+  box-shadow: 0px 0px 38px #1a1c28;
+  border: 1px solid #1a1c28;
+}
+#Price .btn-info {
+  color: #fff;
+  background-color: #1abb9a !important;
+  border-color: #1abb9a !important;
+}
+/*
+==================================
+
+=== 11. LAST IDEA ===
+*/
+//background color
+#LastIdea {
+  background-image: url("/images/last_idea/last_idea.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+//circle around icons
+#LastIdea .circle_icon {
+  border: solid 1px #1abb9a;
+  border-radius: 50%;
+  padding: 8px;
+  margin: 7px;
+  background-color: #1abb9a;
+  color: #ffffff;
+  height: 60px;
+  width: 60px !important;
+}
+#LastIdea .border_icon {
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  padding: 2px;
+  background-color: #ffffff;
+  margin-top: -35px;
+}
+
+#LastIdea a {
+  text-decoration: none;
+  color: #1abb9a;
+}
+
+#LastIdea .card:hover {
+  box-shadow: 0 1rem 3rem rgba(26, 187, 154, 0.175) !important;
+}
+#LastIdea .card:hover .circle_icon {
+  background-color: #2d3e50 !important;
+}
+#LastIdea .card:hover .border_icon {
+  background-color: #1abb9a !important;
+}
+/*
+==================================
+
+=== 12. FOOTER ===
+*/
+
+#Footer {
+  background-color: #1a1c28;
+}
+
+#Footer a {
+  text-decoration: none;
+}
+
+#Footer hr {
+
+  background-color: #1abb9a;
+}
+
+.icon-footer {
+  width: 35px;
+  height: 35px;
+  color: #ffffff;
+}
+
+.bg-pint {
+  background-color: #db4220;
+}
+
+.bg-dribb {
+  background-color: #bb2b83;
+}
+
+#Footer .btn-outline-secondary:hover {
+  border-color: #1abb9a;
+  background-color: transparent;
+}
+
+#Footer .btn-outline-secondary:active {
+  border-color: #1abb9a !important;
+  background-color: #1abb9a !important;
+  box-shadow: none;
+  color: #ffffff;
+}
+
+#Footer .btn-outline-secondary:focus {
+  border-color: #1abb9a !important;
+  background-color: #1abb9a !important;
+  box-shadow: none;
+  color: #ffffff;
+}
+
+#Footer .btn-outline-secondary:visited {
+  background-color: #1abb9a !important;
+  box-shadow: none;
+}
+
+#Footer ul li {
+  list-style-type: none;
+  margin-left: 0px !important;
+}
+
+.square {
+  font-size: 10px;
+  color: #1abb9a;
+  vertical-align: middle;
+}
+
+#Footer ul a:hover .square {
+  color: #6c757d;
+}
+
+#Footer ul li:hover {
+  color: #1abb9a !important;
+}
+
+/*NAVBAR FOOTER*/
+#NavFooter .navbar {
+  background-color: #222534 !important;
+}
+#NavFooter .navbar-light .navbar-toggler {
+
+  border-color: #1abb9a !important;
+  background-color: rgba(26, 187, 154, 0.1) !important;
+}
+/*Button go top*/
+#GoTop {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 99;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 25% !important;
+
+}
+
+#GoTop:hover {
+  background-color: #1a1c28 !important;
+  color:#ffffff;
+}
+
